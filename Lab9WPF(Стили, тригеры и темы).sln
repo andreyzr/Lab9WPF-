@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp4(EventTrigger)", "Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp5(Topic)", "WpfApp5(Topic)\WpfApp5(Topic).csproj", "{AEB6B681-772E-4A69-8973-065114189600}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW", "HW\HW.csproj", "{19D9837F-DB9D-4E04-96DC-47F790FA5D12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AEB6B681-772E-4A69-8973-065114189600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEB6B681-772E-4A69-8973-065114189600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEB6B681-772E-4A69-8973-065114189600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D9837F-DB9D-4E04-96DC-47F790FA5D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D9837F-DB9D-4E04-96DC-47F790FA5D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D9837F-DB9D-4E04-96DC-47F790FA5D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D9837F-DB9D-4E04-96DC-47F790FA5D12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

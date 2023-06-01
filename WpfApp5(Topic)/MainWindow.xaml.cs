@@ -36,7 +36,7 @@ namespace WpfApp5_Topic_
             Uri uri = new Uri("Light.xaml",UriKind.Relative);
             if (styleIndex == 1)
             {
-                uri new Uri("Dark.xaml", UriKind.Relative);
+                uri = new Uri("Dark.xaml", UriKind.Relative);
             }
             ResourceDictionary resource = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.Clear();
