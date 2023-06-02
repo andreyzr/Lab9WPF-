@@ -3,20 +3,52 @@
     <Style x:Key="WindowsStyle">
         <Setter Property="Control.Background" Value="White"/>
     </Style>
-    <Style x:Key="TextBlockStyle" BasedOn="{StaticResource WindowsStyle}">
-        <Setter Property="TextBlock.Foreground" Value="Black"/>
-        <Setter Property="TextBlock.Padding" Value="10"/>
+
+    <Style TargetType="TextBox" >
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
     </Style>
-    <Style x:Key="TextBlockCenterStyle" BasedOn="{StaticResource TextBlockStyle}">
-        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+    <Style TargetType="ToolBar">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
     </Style>
-    <Style x:Key="TextBlockJustifyStyle" BasedOn="{StaticResource TextBlockStyle}">
-        <Setter Property="TextBlock.TextAlignment" Value="Justify"/>
+
+    <Style TargetType="ToolBarTray">
+        <Setter Property="Background" Value="White"/>
     </Style>
-    <Style x:Key="ButtonStyle" BasedOn="{StaticResource WindowsStyle}">
-        <Setter Property="Button.Foreground" Value="Black"/>
-        <Setter Property="Button.BorderBrush" Value="Black"/>
-        <Setter Property="Button.Margin" Value="10"/>
-        <Setter Property="Button.Padding" Value="10"/>
+
+    <Style TargetType="RadioButton">
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style TargetType="ComboBoxItem">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style TargetType="Menu">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style TargetType="MenuItem">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style x:Key= "ImageStyle1" TargetType="Image">
+        <Setter Property="Source" Value="Data/1.png" />
+    </Style>
+    <Style x:Key= "ImageStyle2" TargetType="Image">
+        <Setter Property="Source" Value="Data/2.png" />
+    </Style>
+    <Style x:Key= "ImageStyle3" TargetType="Image">
+        <Setter Property="Source" Value="Data/3.png" />
+    </Style>
+
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
     </Style>
 </ResourceDictionary>

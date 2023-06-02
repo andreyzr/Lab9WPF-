@@ -25,23 +25,6 @@ namespace HW
         public MainWindow()
         {
             InitializeComponent();
-            List<string> style = new List<string>() { "Светлая тема", "Темная тема" };
-            styleBox.ItemsSource = style;
-            styleBox.SelectionChanged += ThemeChange;
-            styleBox.SelectedIndex = 0;
-        }
-
-        private void ThemeChange(object sender, SelectionChangedEventArgs e)
-        {
-            int styleIndex = styleBox.SelectedIndex;
-            Uri uri = new Uri("Light.xaml", UriKind.Relative);
-            if (styleIndex == 1)
-            {
-                uri = new Uri("Dark.xaml", UriKind.Relative);
-            }
-            ResourceDictionary resource = Application.LoadComponent(uri) as ResourceDictionary;
-            Application.Current.Resources.Clear();
-            Application.Current.Resources.MergedDictionaries.Add(resource);
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -160,6 +143,14 @@ namespace HW
         private void CloseExecuted(object sender, ExecutedRoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void styleBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Uri theam = new Uri(style.SelectedIndex == 0 ? "Light.xaml" : "Dark.xaml", UriKind.Relative);
+            ResourceDictionary themeDict = Application.LoadComponent(theam) as ResourceDictionary;
+            Application.Current.Resources.MergedDictionaries.Add(themeDict);
         }
     }
 }

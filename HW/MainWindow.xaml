@@ -29,20 +29,34 @@
         </Menu>
         <ToolBarTray Grid.Row="1">
             <ToolBar Margin="5" Padding="5" >
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged" ItemsSource="{StaticResource FontStyles}"/>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1" ItemsSource="{StaticResource FontWeights}"/>
+                <ComboBox 
+                    Margin="5" 
+                    Padding="5" 
+                    SelectedIndex="0" 
+                    Width="200" 
+                    SelectionChanged="ComboBox_SelectionChanged" 
+                    ItemsSource="{StaticResource FontStyles}"
+                    Style="{DynamicResource ComboBoxStyle}"/>
+                <ComboBox 
+                    Margin="5" 
+                    Padding="5" 
+                    SelectedIndex="2" 
+                    Width="50" 
+                    SelectionChanged="ComboBox_SelectionChanged_1" 
+                    ItemsSource="{StaticResource FontWeights}"
+                    Style="{DynamicResource ComboBoxStyle}"/>
             </ToolBar>
-            <ToolBar  Margin="5" Padding="5">
+            <ToolBar  Margin="5" >
                 <ToggleButton Click="Button_Click" IsChecked="False">
-                    <Image Source="Data/1.png" />
+                    <Image Style="{DynamicResource ImageStyle1}"/>
                 </ToggleButton>
                 <Separator/>
                 <ToggleButton Click="Button_Click_1" IsChecked="False">
-                    <Image Source="Data/2.png"/>
+                    <Image Style="{DynamicResource ImageStyle2}"/>
                 </ToggleButton>
                 <Separator/>
                 <ToggleButton Click="Button_Click_2" IsChecked="False">
-                    <Image Source="Data/3.png"/>
+                    <Image Style="{DynamicResource ImageStyle3}"/>
                 </ToggleButton>
                 <Separator/>
             </ToolBar>
@@ -53,9 +67,22 @@
                 </StackPanel>
             </ToolBar>
             <ToolBar  Margin="5" Padding="5">
-                <ComboBox x:Name="styleBox"/>
+                <ComboBox x:Name="style" 
+                          Width="100" 
+                          SelectedIndex="0" 
+                          SelectionChanged="styleBox_SelectionChanged" 
+                          Style="{DynamicResource ComboBoxStyle}">
+                    <TextBlock Text="Светлая"/>
+                    <TextBlock Text="Темная"/>
+                </ComboBox>
             </ToolBar>
         </ToolBarTray >
-        <TextBox x:Name="textbox" Grid.Row="2" Margin="0,10,10,0" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap" UndoLimit="103"  />
+        <TextBox 
+            x:Name="textbox" 
+            Grid.Row="2" 
+            Margin="0,10,10,0"  
+            FontSize="16"  
+            FontFamily="Arial" 
+            TextWrapping="Wrap"   />
     </Grid>
 </Window>
